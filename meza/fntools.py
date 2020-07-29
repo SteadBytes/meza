@@ -1109,7 +1109,7 @@ def listize(item):
     if hasattr(item, 'keys'):
         listlike = False
     else:
-        attrs = {'append', 'next', '__reversed__'}
+        attrs = {'append', 'next', '__reversed__', '__next__'}
         listlike = attrs.intersection(dir(item))
 
     return item if listlike else [item]
